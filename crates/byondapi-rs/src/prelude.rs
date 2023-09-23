@@ -1,20 +1,13 @@
-//! This prelude exposes all of the common types and functions end libraries will end up using.
+//! This prelude exposes all of the common types and functions end libraries
+//! will end up using.
 
-// We re-export some types from byondapi_sys that end libraries will end up needing.
+// We re-export some types from byondapi_sys that end libraries will end up
+// needing.
 
 pub use crate::sys;
 
 // Number types
-pub use crate::sys::s1c;
-pub use crate::sys::s1cMAX;
-pub use crate::sys::s1cMIN;
-pub use crate::sys::s2c;
-pub use crate::sys::s2cMAX;
-pub use crate::sys::s2cMIN;
-pub use crate::sys::s4c;
-pub use crate::sys::s4cMAX;
-pub use crate::sys::s4cMIN;
-pub use crate::sys::u1c;
+pub use crate::sys::{s1c, s1cMAX, s1cMIN, s2c, s2cMAX, s2cMIN, s4c, s4cMAX, s4cMIN, u1c};
 // pub use crate::sys::u1cMAX;
 // pub use crate::sys::u1cMIN;
 pub use crate::sys::u2c;
@@ -31,12 +24,14 @@ pub use crate::sys::s8c;
 // pub use crate::sys::s8cMIN;
 
 // Other types
-pub use byondapi_sys::u4cOrPointer;
-pub use byondapi_sys::ByondValueData as InternalByondValueData;
-pub use byondapi_sys::ByondValueType as InternalByondValueType;
-pub use byondapi_sys::CByondValue as InternalByondValue;
-pub use byondapi_sys::CByondValueList as InternalByondValueList;
+pub use byondapi_sys::{
+	u4cOrPointer, ByondValueData as InternalByondValueData,
+	ByondValueType as InternalByondValueType, CByondValue as InternalByondValue,
+	CByondValueList as InternalByondValueList,
+};
 
 // As well as our own types.
-pub use crate::list::ByondValueList;
-pub use crate::value::ByondValue;
+pub use crate::{
+	list::ByondValueList,
+	value::{ByondTypeCheck, ByondValue},
+};

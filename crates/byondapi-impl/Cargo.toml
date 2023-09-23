@@ -1,0 +1,20 @@
+[package]
+name = "byondapi-impl"
+version = "0.1.0"
+authors = ["tigercat2000 <nick.pilant@gmail.com>"]
+edition = "2021"
+description = "Idiomatic Rust bindings for BYONDAPI"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/spacestation13/byondapi-rs"
+keywords = ["byond", "byondapi"]
+exclude = [".vscode/*"]
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
+darling = "0.20"
+
+[lib]
+proc-macro = true

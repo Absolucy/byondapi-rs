@@ -1,0 +1,16 @@
+[package]
+name = "byondapi-serde"
+version = "0.1.0"
+authors = ["Lucy <lucy@absolucy.moe>"]
+edition = "2021"
+description = "Idiomatic Rust bindings for BYONDAPI"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/spacestation13/byondapi-rs"
+keywords = ["byond", "byondapi"]
+exclude = [".vscode/*"]
+
+[dependencies]
+byondapi = { path = "../byondapi-rs" }
+serde = "1"
+thiserror = "1"

@@ -106,6 +106,8 @@ macro_rules! map_byond_error {
 pub mod crash_logging {
     pub fn log_to_file<S: AsRef<str>>(log: S) {
         // Just drop the error, if we can't write the log then :shrug:
-        let _ = std::fs::write("./byondapi-rs-log.txt", log.as_ref());
+        let log = log.as_ref();
+        eprintln!("{log}");
+        let _ = std::fs::write("./byondapi-rs-log.txt", log);
     }
 }
